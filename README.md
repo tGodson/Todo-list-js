@@ -54,6 +54,12 @@ Mozilla Firefox
 - Twitter: [@tendongze95](https://twitter.com/tendongze95)
 - Linkedin: [linkedin](https://www.linkedin.com/in/tendongzegodson)
 
+👤 **Mark James Kiptubei**
+
+- Github: [@kiptubei](https://github.com/kiptubei)
+- Twitter: [@mjabei](https://twitter.com/mjabei)
+- Linkedin: [Mark James Kiptubei](https://www.linkedin.com/in/kiptubei/)
+
 ## 🤝 Contributing
 
 Contributions and feature requests are welcome!

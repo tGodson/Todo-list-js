@@ -1,16 +1,18 @@
 .container {
   width: 100%;
   text-align: center;
-  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 100%);
 }
 
-.todo-items{
+.todo-items {
   background-color: #f6f6f6;
   height: 100vh;
 }
-.project{
+
+.project {
   height: 100vh;
 }
-.todos{
+
+.todos {
   background-color: white;
 }
