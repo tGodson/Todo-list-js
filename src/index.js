@@ -1,5 +1,23 @@
-const projectDiv = document.querySelector('.projectList');
 let projects = JSON.parse(localStorage.getItem('projects'));
+const projectDiv = document.querySelector('.projectList');
+
+if(projects && projects.length > 0){
+  for (let i = 0;i < projects.length; i++){ 
+    let p = document.createElement('p');
+    p.setAttribute('class', 'project');
+    p.setAttribute('id', i);
+    p.innerHTML = "- "+projects[i];
+    let icon = document.createElement('i');
+    icon.setAttribute('class', 'fas fa-trash-alt');
+    p.appendChild(icon);
+    projectDiv.appendChild(p);
+
+  };
+}else if(!projects){
+  let projects = [];
+  localStorage.setItem('projects', JSON.stringify(projects));
+  window.location.reload();
+}
 
 let addProject = document.querySelector('.add_project');
 
@@ -16,9 +34,7 @@ addProject.addEventListener('click', function () {
   newProject.innerHTML = '+Add';
   projectDiv.appendChild(newProject);
 
-});
-
-let submitProject = document.querySelector('.new_project');
+  let submitProject = document.querySelector('.new_project');
   submitProject.addEventListener('click', function () {
     let latestProject = document.querySelector('.new_project_value').value;
     console.log(latestProject);
@@ -28,16 +44,4 @@ let submitProject = document.querySelector('.new_project');
 
   });
 
-if(projects){
-  for (let i = 0;i < projects.length; i++){ 
-    let p = document.createElement('p');
-    p.setAttribute('class', 'project');
-    p.setAttribute('id', i);
-    p.innerHTML = "- "+projects[i];
-    let icon = document.createElement('i');
-    icon.setAttribute('class', 'fas fa-trash-alt');
-    p.appendChild(icon);
-    projectDiv.appendChild(p);
-
-  };
-}
+});
