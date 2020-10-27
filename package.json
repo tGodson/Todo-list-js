@@ -1,0 +1,28 @@
+{
+  "name": "Todo-list-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This is a JavaScript To-Do list app where users can add projects and there corresponding task lists they like to work on.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tGodson/Todo-list-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tGodson/Todo-list-js/issues"
+  },
+  "homepage": "https://github.com/tGodson/Todo-list-js#readme",
+  "devDependencies": {
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1"
+  }
+}
