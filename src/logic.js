@@ -1,4 +1,4 @@
-// import { id, todoArr, projectClick } from './index.js'
+import { id, todoArr, projectClick, projects } from './index.js'
 function TodoConstructor(title, description, dueDate, priority, id) {
   this.title = title;
   this.description = description;
@@ -24,4 +24,19 @@ const formData = () => {
   projectClick(id);
   
 };
-// export { formData, TodoConstructor }; 
+
+const deleteFunction = (del) => {
+  projects.splice(del, 1);
+  localStorage.setItem('projects', JSON.stringify(projects));
+  for (let i = 0;i < todoArr.length; i++){ 
+    console.log(todoArr[i].id, del);
+    if(todoArr[i].id == del){
+      console.log(todoArr[i].id, del);
+      todoArr.splice(i, 1);
+      localStorage.setItem('activeProject', JSON.stringify(todoArr));
+    }
+  }
+  localStorage.setItem('activeProject', JSON.stringify(0));
+  
+}
+export { formData, TodoConstructor, deleteFunction }; 

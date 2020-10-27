@@ -1,24 +1,11 @@
-// import { formData, TodoConstructor } from './logic';
+import { formData, TodoConstructor, deleteFunction } from './logic';
 
 let projects = JSON.parse(localStorage.getItem('projects'));
 const projectDiv = document.querySelector('.projectList');
 const todoTable = document.querySelector('.todo_table');
 let id = JSON.parse(localStorage.getItem('activeProject'));
 
-let todoArr = [];
-
-const deleteFunction = (del) => {
-  projects.splice(del, 1);
-  localStorage.setItem('projects', JSON.stringify(projects));
-  for (let i = 0;i < todoArr.length; i++){ 
-    if(todoArr[i].id == del){
-      todoArr.splice(todoArr[i], 1);
-      localStorage.setItem('activeProject', JSON.stringify(todoArr));
-    }
-  }
-  localStorage.setItem('activeProject', JSON.stringify(0));
-  window.location.reload();
-}
+let todoArr;
 
 const projectDisplay = () => {
 
@@ -45,8 +32,10 @@ const projectDisplay = () => {
   }else{
     projects = ["Today's Task"];
     id = 0;
+    todoArr = [];
     localStorage.setItem('projects', JSON.stringify(projects));
     localStorage.setItem('activeProject', JSON.stringify(id));
+    localStorage.setItem('todoArr', JSON.stringify(todoArr));
 
     for (let i = 0;i < projects.length; i++){ 
       let p = document.createElement('p');
@@ -67,7 +56,7 @@ const todoDisplay = (id) => {
   if(todoArr){ 
     for(let i=0;i < todoArr.length;i++){
       if(todoArr[i].id == id){ 
-        console.log(id);
+        
         const tr = document.createElement('tr');
         tr.setAttribute('class', 'table_body');
         const td1 = document.createElement('td');
@@ -142,4 +131,4 @@ addTodos.addEventListener('click', function () {
   document.querySelector('.todo_form').style.display = "block";
 });
 
-// export { id, todoArr, projectClick }
+export { id, todoArr, projectClick, projects }
