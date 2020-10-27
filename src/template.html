@@ -20,7 +20,7 @@
 <body>
 <div class="container">
   <div class="row head">
-    <div class="col">
+    <div class="col project_head">
       <h1>Todo List</h1>
     </div>
   </div>
@@ -29,16 +29,16 @@
     <div class="col-md-3 project_section">
       <h3>Projects</h3>
       <div class="projectList">
-        <p id="default" class="project">Today's Task</p>
       </div>
       <div>
         <button class="add_project">+</button>
       </div>
     </div>
     <div class="col-md-9 todo_items">
+      <div class="todo_section">
       <h3>Todos</h3>
       <div class="todos">
-        <table id="todo_table">
+        <table class="todo_table">
           <tr class="head">
             <th>Title</th>
             <th>Description</th>
@@ -50,6 +50,42 @@
       <div>
         <button class="add_todos">+</button>
       </div>
+      </div>
+
+        <form action="/" class="todo_form">
+          <div class="banner">
+            <h3>Todo Form</h3>
+          </div>
+          <div class="item">
+            <label for="title">Title<span>*</span></label>
+            <input id="title" type="text" name="title" required/>
+          </div>
+          <div class="item">
+            <label for="ddate">Due Date<span>*</span></label>
+            <input id="ddate" type="date" name="ddate" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="question">
+            
+            <div>
+              <div class="priority">
+                <label>Priority</label>
+                <label for="radio_1" class="radio"><span>High</span></label>
+                <input type="radio" value="High" id="priority_radio" name="gender"/>
+                <label for="radio_2" class="radio"><span>Low</span></label>
+                <input  type="radio" value="Low" id="priority_radio" name="gender"/>        
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <label for="email">Description<span>*</span></label>
+            <textarea id="description" type="message" name="description" required></textarea>
+          </div>
+          <div class="btn-block">
+            <button type="submit" href="/">SUBMIT</button>
+          </div>
+        </form>
+
     </div>
   </div>
 </div>

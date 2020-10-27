@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
   background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
 }
 
@@ -13,4 +13,43 @@
 }
 .todos{
   background-color: white;
+}
+.project{
+  cursor: pointer;
+}
+.priority{
+  display: flex;
+  text-align: center;
+}
+.project_section {
+  font-weight: 800;
+  padding-left: 5%;
+}
+.project_section h3{
+  color: #525252;
+}
+.todo_section h3{
+  color: #525252;
+}
+.project_head{
+  text-align: center;
+}
+.projectList {
+  color: white;
+}
+button {
+  background-color: rgb(9, 151, 9);
+  border: none;
+}
+.table_body{
+  color: #525252;
+}
+.todo_section{
+  padding: 0 10%;
+}
+.todos{
+  padding: 0 20px;
+}
+td,th {
+  padding: 10px 20px;
 }
