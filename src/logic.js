@@ -1,7 +1,7 @@
-import { id, todoArr, projectClick, projects } from './index';
+/* eslint-disable no-plusplus */
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./style.css";
+import './style.css';
 
 
 function TodoConstructor(title, description, dueDate, priority, id) {
@@ -12,4 +12,4 @@ function TodoConstructor(title, description, dueDate, priority, id) {
   this.id = id;
 }
 
-export { TodoConstructor }; 
+export default TodoConstructor;
