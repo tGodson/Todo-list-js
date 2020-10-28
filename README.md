@@ -40,10 +40,9 @@ Mozilla Firefox
 
 ### Usage
 
-- Fork/Clone this project to your local machine
-- Open folder in your local enviroment and run these lines of code to get started:
-    `https://github.com/tGodson/Todo-list-js.git`
-- Double click on index.html
+- Fork/Clone this project to your local machine with the command `git clone https://github.com/tGodson/Todo-list-js.git`
+- `cd` into the project directory
+- Double click on `index.html` in the `dist` folder to open the project in the browser
 - To view in IDE just open project folder in your prefered IDE
 
 ## Author
