@@ -1,5 +1,6 @@
 import { formData, TodoConstructor, deleteFunction } from './logic';
 import "./style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 let projects = JSON.parse(localStorage.getItem('projects'));
 const projectDiv = document.querySelector('.projectList');
