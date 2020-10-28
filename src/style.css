@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  /* text-align: center; */
   background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
 }
 
@@ -70,4 +69,3 @@ td,th {
   padding: 3px;
   margin-left: 7px;
 }
-/* @import "~bootstrap/css/bootstrap"; */

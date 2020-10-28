@@ -1,13 +1,14 @@
-import { formData, TodoConstructor, deleteFunction } from './logic';
-import "./style.css";
+import { TodoConstructor } from './logic';
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css";
 
 let projects = JSON.parse(localStorage.getItem('projects'));
 const projectDiv = document.querySelector('.projectList');
 const todoTable = document.querySelector('.todo_table');
 let id = JSON.parse(localStorage.getItem('activeProject'));
 
-let todoArr;
+let todoArr = JSON.parse(localStorage.getItem('todoArr'));
 
 const projectDisplay = () => {
 
@@ -132,5 +133,39 @@ addTodos.addEventListener('click', function () {
   document.querySelector('.todo_section').style.display = "none";
   document.querySelector('.todo_form').style.display = "block";
 });
+
+const formData = () => {
+  console.log("it really reaches here but i dont know what is happpening");
+  id = JSON.parse(localStorage.getItem('activeProject'));
+  const title = document.querySelector('#title').value;
+  const description = document.querySelector('#description').value;
+  const dueDate = document.querySelector('#ddate').value;
+  const priority = document.querySelector('#priority_radio').checked;
+  let prty = 'low';
+    if(priority == false){
+      prty = 'high';
+    }
+  const newTodo = new TodoConstructor(title, description, dueDate, prty, id);
+  todoArr.push(newTodo);
+  localStorage.setItem('todoArr', JSON.stringify(todoArr));
+  
+  projectClick(id);
+  
+};
+
+const deleteFunction = (del) => {
+  projects.splice(del, 1);
+  localStorage.setItem('projects', JSON.stringify(projects));
+  for (let i = 0;i < todoArr.length; i++){ 
+    console.log(todoArr[i].id, del);
+    if(todoArr[i].id == del){
+      todoArr.splice(i, 1);
+    }
+  }
+  id = 0;
+  localStorage.setItem('todoArr', JSON.stringify(todoArr));
+  localStorage.setItem('activeProject', JSON.stringify(id));
+  
+}
 
 export { id, todoArr, projectClick, projects }
