@@ -52,6 +52,7 @@ Mozilla Firefox
 - Github: [tGodson](https://github.com/tGodson)
 - Twitter: [@tendongze95](https://twitter.com/tendongze95)
 - Linkedin: [linkedin](https://www.linkedin.com/in/tendongzegodson)
+- Email: tendongzegodson@gmail.com
 
 👤 **Mark James Kiptubei**
 
