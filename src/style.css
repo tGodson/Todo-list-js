@@ -1,0 +1,79 @@
+.container {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 100%);
+}
+
+.todo_items {
+  background-color: #f6f6f6;
+  height: 100vh;
+}
+
+.todos {
+  background-color: white;
+  padding: 0 20px;
+}
+
+.project {
+  cursor: pointer;
+}
+
+.priority {
+  display: flex;
+  text-align: center;
+}
+
+.project_section {
+  font-weight: 800;
+  height: 100vh;
+  color: #525252;
+  padding-left: 5%;
+}
+
+.todo_section h3 {
+  color: #525252;
+  text-align: center;
+}
+
+.project_head {
+  text-align: center;
+}
+
+.projectList {
+  color: white;
+}
+
+button {
+  background-color: rgb(9, 151, 9);
+  border: none;
+}
+
+.table_body {
+  color: #525252;
+}
+
+.todo_section {
+  padding: 0 10%;
+}
+
+td,
+th {
+  padding: 10px 30px;
+}
+
+.add_todo {
+  text-align: center;
+}
+
+.new_project_value {
+  color: black;
+}
+
+.delete_project {
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  padding: 3px;
+  margin-left: 7px;
+}
